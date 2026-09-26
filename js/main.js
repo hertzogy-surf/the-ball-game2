@@ -43,3 +43,19 @@ function swapBalls() {
     }
 
 }
+
+function reduceSizes() {
+    //updating the model
+    for (var i = 0; i < 2; i++) {
+        gCurrBallSizes[i] -= getRandomInt(20, 60)
+        if (gCurrBallSizes[i] < 100) gCurrBallSizes[i] = 100
+    }
+
+    //updating the dom
+    for (var i = 0; i < 2; i++) {
+        var elBall = document.querySelector(`.ball${i}`)
+        elBall.style.width = elBall.style.height = gCurrBallSizes[i] + 'px'
+        elBall.innerText = gCurrBallSizes[i]
+    }
+}
+

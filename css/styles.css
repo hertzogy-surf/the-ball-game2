@@ -24,6 +24,6 @@ div {
     background-color: blue;
 }
 
-.swap {
+.swap, .reduce {
     background-color: white;
 }
