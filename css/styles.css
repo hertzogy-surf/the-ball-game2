@@ -16,10 +16,10 @@ div {
     font-weight: bold;
     transition: 1s;
 }
-.ball {
+.ball0 {
     background-color: yellow;
 }   
 
-.ball2 {
+.ball1 {
     background-color: blue;
 }
