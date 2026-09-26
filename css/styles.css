@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    text-align: center;
 }
 
 h1 {
@@ -12,4 +13,6 @@ div {
     height: 100px;
     background-color: yellow;
     margin: 0 auto;
+    font-size: 22px;
+    font-weight: bold;
 }
