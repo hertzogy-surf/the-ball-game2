@@ -5,22 +5,17 @@ var gCurrBallColors = ['yellow', 'blue']
 function onBallClick(elDiv, maxDiameter) {
 
     var currBallIdx = +elDiv.id
-    var currBallSize = gCurrBallSizes[currBallIdx]
 
-    currBallSize += getRandomInt(20, 60)
+    //update model
+    gCurrBallSizes[currBallIdx] += getRandomInt(20, 60)
+    if (gCurrBallSizes[currBallIdx] > maxDiameter) gCurrBallSizes[currBallIdx] = 100
 
-    if (currBallSize > maxDiameter) currBallSize = 100
+    gCurrBallColors[currBallIdx] = getRandomColor()
 
-
-    elDiv.style.width = elDiv.style.height = currBallSize + 'px'
-    elDiv.style.backgroundColor = getRandomColor()
-    elDiv.innerText = currBallSize
-
-    gCurrBallSizes[currBallIdx] = currBallSize
-    gCurrBallColors[currBallIdx] = elDiv.style.backgroundColor
-    console.log(gCurrBallColors[0])
-
-    console.log(gCurrBallColors[1])
+    //update dom
+    updateSizeStyle(elDiv, currBallIdx)
+    updateColorStyle(elDiv, currBallIdx)
+    updateInnerText(elDiv, currBallIdx)
 }
 
 function swapBalls() {
