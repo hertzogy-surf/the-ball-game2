@@ -1,5 +1,6 @@
 var gCurrBallSizes = [100, 100]
 var gCurrBallColors = ['yellow', 'blue']
+var gCurrPageColor = 'black'
 
 
 function onBallClick(elDiv, maxDiameter) {
@@ -47,5 +48,11 @@ function reduceSizes() {
         updateSizeStyle(elBall, i)
         updateInnerText(elBall, i)
     }
+}
+
+function onChangePageColor() {
+
+    gCurrPageColor = getRandomColor()
+    document.querySelector('body').style.backgroundColor = gCurrPageColor
 }
 

@@ -1,6 +1,7 @@
 body {
     background-color: black;
     text-align: center;
+    transition: 1s;
 }
 
 h1 {
@@ -24,6 +25,6 @@ div {
     background-color: blue;
 }
 
-.swap, .reduce {
+.swap, .reduce, .changePageColor {
     background-color: white;
 }
